@@ -7,4 +7,4 @@ $(inputs).only("ABC123");
 
 or for full functionality
 
-$(inputs).only({allowed:"ABC123",limit:10});
+$(inputs).only({allowed:"ABC123",max:10});
