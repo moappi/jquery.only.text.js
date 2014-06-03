@@ -1,0 +1,43 @@
+<html>
+
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src='../jquery.only.text.js'></script>
+</head>
+
+<body>
+	<input id='numeric' type='text' placeholder='Numbers only..' />
+
+	<input id='alpha' type='text' placeholder='Alpha only..' />
+
+	<input id='lower' type='text' placeholder='Lower Case only..' />
+
+	<input id='limit' type='text' placeholder='10 digits only..' />
+
+	<input id='phone' type='text' placeholder='(XXX)XXX-XXXX' />
+
+</body>
+
+<script>
+
+$(function(){
+
+	//Numeric Only
+	$('#numeric').only("1234567890");
+
+	//Alpha (upper and lower) Only
+	$('#alpha').only("ABCDEFGHIJKLMNOPQRSTUVWXYZabscdefghijklmnopqrstuvwxyz");
+
+	//Alpha Lower Only
+	$('#lower').only("abscdefghijklmnopqrstuvwxyz");
+
+	//10 Numeric Digits Only
+	$('#limit').only({allowed:"1234567890",max:10});
+
+	//10 Digit Phone Number (13 characters long)
+	$('#phone').only({allowed:"1234567890-()",max:13});
+
+});
+</script>
+
+</html>
